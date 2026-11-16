@@ -61,7 +61,7 @@ def tctl_get(resource):
     return subprocess.check_output(
         [
             "/usr/local/bin/tctl",
-            "--auth-server=kaichevannes-teleport.uk:443",
+            "--auth-server=kai.tams.sh:443",
             "--identity=/opt/machine-id/identity",
             "get",
             resource,
@@ -77,7 +77,7 @@ def tctl_check(*args):
         result = subprocess.run(
             [
                 "/usr/local/bin/tctl",
-                "--auth-server=kaichevannes-teleport.uk:443",
+                "--auth-server=kai.tams.sh:443",
                 "--identity=/opt/machine-id/identity",
                 *args,
             ],
@@ -254,7 +254,7 @@ def main():
                 subprocess.check_output(
                     [
                         "/usr/local/bin/tctl",
-                        "--auth-server=kaichevannes-teleport.uk:443",
+                        "--auth-server=kai.tams.sh:443",
                         "--identity=/opt/machine-id/identity",
                         "access-review",
                         "--query=SELECT * FROM access_path WHERE standing_privileges >= 1",
